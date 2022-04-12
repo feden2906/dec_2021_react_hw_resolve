@@ -1,19 +1,18 @@
-import { useState } from 'react';
+import {useState} from "react";
 
-import styles from './App.module.css';
-import { Posts, UserInfo, Users } from './components';
+import {CarForm, Cars} from "./components";
 
-export const App = () => {
-  const [user, setUser] = useState(null);
-  const [userIdForPosts, setUserIdForPosts] = useState(null);
+const App = () => {
+    const [newCar, setNewCar] = useState(null);
+    const [carForUpdate,setCarForUpdate] = useState(null);
 
-  return (
-      <div>
-        <div className={styles.usersAndInfo}>
-          <Users setUser={setUser} setUserIdForPosts={setUserIdForPosts}/>
-          {user && <UserInfo user={user} setUserIdForPosts={setUserIdForPosts}/>}
+    return (
+        <div>
+            <CarForm setNewCar={setNewCar} carForUpdate={carForUpdate}/>
+            <hr/>
+            <Cars newCar={newCar} setCarForUpdate={setCarForUpdate}/>
         </div>
-        {userIdForPosts && <Posts userId={userIdForPosts}/>}
-      </div>
-  );
-}
+    );
+};
+
+export default App;
