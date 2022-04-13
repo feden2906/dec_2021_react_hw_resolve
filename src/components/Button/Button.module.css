@@ -1,0 +1,9 @@
+.button {
+    color: red;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: red;
+    color: snow;
+}
