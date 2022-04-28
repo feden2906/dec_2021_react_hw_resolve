@@ -1,20 +1,13 @@
-import './App.css';
-import { Cats, CatsForm, Dogs, DogsForm } from './components';
+import {CarForm, Cars} from "./components";
 
-export const App = () => {
-  return (
-      <div>
-        <div className={'flex'}>
-          <CatsForm/>
-          <DogsForm/>
+const App = () => {
+    return (
+        <div>
+            <CarForm/>
+            <hr/>
+            <Cars/>
         </div>
+    );
+};
 
-        <hr/>
-
-        <div className={'flex'}>
-          <Cats/>
-          <Dogs/>
-        </div>
-      </div>
-  );
-}
+export default App;
